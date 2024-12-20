@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-size: cover;
+    font-family: arial, sans-serif;
+    font-size: 13px;
+    margin: 0;
+}
+
+input, button {
+    font-family: arial, sans-serif;
+    font-size: 14px;
+}
+
+h3 {
+    color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image va couvrir toute la zone */
+}
+
+:focus {
+    outline: none;
+}
+
+.containe {
+    width: 50%;
+    height: auto;
+    margin: 150px auto 0 auto; /* Centrer verticalement et horizontalement */
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Cela aligne l'image et le formulaire sur la même hauteur */
+}
+
+.inner {
+    padding: 5px;
+    background: #080808;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: stretch; /* Aligner l'image et le formulaire sur la même ligne */
+}
+
+.image-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55vh;
+}
+
+.image-holder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Remplir l'espace sans déformer l'image */
+}
+
+.inner form {
+    width: 50%;
+    padding-top: 36px;
+    padding-left: 20px; /* Ajouté pour un peu d'espace à gauche */
+}
+
+.inner h3 {
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    text-align: left;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 20px; /* Ajouté un espacement entre les champs */
+}
+
+.form-control {
+    border: none;
+    border-bottom: 1px solid #fff;
+    display: block;
+    width: 80%;
+    height: 50px;
+    background-color: #080808;
+    color: white;
+}
+
+.from-KC {
+    border: none;
+    border-bottom: 1px solid rgb(253, 178, 117);
+    display: block;
+    width: 80%;
+    height: 50px;
+    background-color: #0d0e0d;
+    color: white;
+}
+
+h4 {
+    color: #fff;
+    padding-top: 30px;
+}
+
+button {
+    background-color: rgb(253, 178, 117);
+    border: none;
+    width: 80px;
+    height: 30px;
+    margin-top: 60px;
+    color: #fff;
+    text-align: center;
+    font-family: 'Lucida Sans', sans-serif;
+    font-size: 12px;
+}
+
+h5 {
+    color: rgb(253, 178, 117);
+    margin-top: 15px;
+}
+
+.bnt {
+    display: flex;
+    gap: 30px;
+}
+
+.groupe a {
+    background: #fff;
+    text-decoration: none;
+    color: rgb(7, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.mode {
+    background: rgb(253, 178, 117);
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 40px;
+    border-radius: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.mode a {
+    background: rgb(1, 2, 1);
+    text-decoration: none;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+/* Responsivité - Mise en page mobile */
+@media only screen and (max-width: 768px) {
+    .containe {
+        width: 100%;
+        margin:2px;
+        flex-direction: column; /* Empilement vertical sur les petits écrans */
+        align-items: center; /* Centrer les éléments sur les petits écrans */
+    }
+
+    .image-holder,
+    .inner form {
+        width: 60%; /* 100% de largeur pour chaque section */
+        margin: 0;
+        padding-left: 0;
+    }
+
+    .inner form {
+        padding-top: 20px; /* Réduction de la marge du haut */
+    }
+
+    /* Ajustement du texte pour la version mobile */
+    h3 {
+        font-size: 18px; /* Ajuster la taille du texte pour les petits écrans */
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        flex-direction: column; /* Empilement vertical des champs */
+        margin-bottom: 15px;
+    }
+
+    .form-control,
+    .from-KC {
+        width: 90%; /* Prendre plus de place sur l'écran */
+        height: 45px;
+    }
+
+    button {
+        width: 90%;
+        height: 40px;
+        font-size: 14px; /* Agrandir légèrement la taille du texte du bouton */
+    }
+
+    .bnt {
+        gap: 20px; /* Réduire l'espace entre les éléments */
+    }
+
+    .groupe a {
+        font-size: 18px; /* Ajuster la taille des liens */
+    }
+
+    .mode {
+        width: 80%; /* Réduire la largeur de la zone pour une meilleure lisibilité */
+        font-size: 16px;
+    }
+
+    /* Réduire l'espace entre les éléments du formulaire */
+    h4 {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .inner form {
+        padding-top: 15px; /* Réduire encore le padding pour les écrans plus petits */
+    }
+
+    .form-control,
+    .from-KC {
+        width: 95%; /* Utiliser presque toute la largeur */
+    }
+
+    button {
+        width: 95%; /* Bouton plus large sur petits écrans */
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .groupe a {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+
+    .mode {
+        width: 70%; /* Largeur réduite pour la version mobile */
+        font-size: 14px;
+    }
+}
